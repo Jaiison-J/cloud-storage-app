@@ -39,7 +39,7 @@ Frontend (HTML/JS) → Supabase Authentication → Supabase Storage
 ![Signup](screenshots/signup.png)
 
 ### 🔑 Login Page
-![Login](screenshots/sigin.png)
+![Login](screenshots/signin.png)
 
 ### 📤 Upload Page
 ![Upload](screenshots/upload.png)
