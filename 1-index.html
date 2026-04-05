@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S.E.A CET - Cloud Storage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="college-header">
+    <h1>S.E.A COLLEGE OF ENGINEERING AND TECHNOLOGY</h1>
+    <h2>BANGALORE</h2>
+    <p>Cloud Storage Portal</p>
+  </div>
+
+  <div class="content">
+    <!-- Alert Messages -->
+    <div id="alert" class="alert"></div>
+
+    <!-- Auth Section -->
+    <div id="authSection">
+      <div class="auth-toggle">
+        <button class="toggle-btn active" onclick="showAuthForm('signin')">Sign In</button>
+        <button class="toggle-btn" onclick="showAuthForm('signup')">Sign Up</button>
+      </div>
+
+      <!-- Sign In Form -->
+      <div id="signinForm" class="form active">
+        <div class="input-group">
+          <label>Email Address</label>
+          <input type="email" id="signinEmail" placeholder="student@sea.edu.in">
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" id="signinPassword" placeholder="Enter your password">
+        </div>
+        <button class="btn" onclick="handleSignIn()">Sign In</button>
+      </div>
+
+      <!-- Sign Up Form -->
+      <div id="signupForm" class="form">
+        <div class="input-group">
+          <label>Email Address</label>
+          <input type="email" id="signupEmail" placeholder="student@sea.edu.in">
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" id="signupPassword" placeholder="Create a password (min 6 characters)">
+        </div>
+        <button class="btn" onclick="handleSignUp()">Create Account</button>
+      </div>
+    </div>
+
+    <!-- App Section (After Login) -->
+    <div id="appSection" class="app-area">
+      <div class="welcome-header">
+        <div>
+          <strong>Welcome!</strong>
+          <div class="user-email" id="userEmail"></div>
+        </div>
+        <button class="logout-btn" onclick="handleLogout()">Logout</button>
+      </div>
+
+      <div class="upload-area">
+        <h3>📁 Upload Files</h3>
+        <div class="file-input">
+          <input type="file" id="fileInput" multiple>
+        </div>
+        <button class="btn upload-btn" onclick="handleUpload()">Upload File(s)</button>
+      </div>
+
+      <div class="files-section">
+        <h3>📄 My Files</h3>
+        <div id="filesList">
+          <div class="loading">Loading your files...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="app.js"></script>
+</body>
+</html>
